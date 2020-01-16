@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://ThanushreeCU.github.io/TY_TechElevate_TrainingMaintenance_Thanushree/ty-styles-table.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://ThanushreeCU.github.io/TY_TechElevate_TrainingMaintenance_Thanushree/ty-styles-form.css">
+</head>
+
+<body>
+
+    <!-- <a routerLink="/home"> <button type="button" class="btn btn-outline-info">Back</button></a> -->
+    <!-- <button type="button" class="float-right ty-download"><i class="fa fa-download" aria-hidden="true"></i></button>
+        <button type="submit" class="float-right ty-print"><i class="fas fa-print"></i></button> -->
+    <div class="container col-md-10 offset-1">
+        <div class="mt-4">
+            <h3 class="ty-heading">Billable Employees Info</h3>
+            <table class="table table-hover table-bordered">
+                <thead class="text-white ty-header">
+                    <tr>
+                        <td>Client Name</td>
+                        <td>Employee Name</td>
+                        <td>Date Of Deployment</td>
+                        <td>Contract End Date </td>
+                        <td>Ratecard</td>
+                        <td>Stack</td>
+                        <td>Year Of Experience</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr *ngFor="let billableEmployeesDetails of clientsService.billableClients">
+                        <td>{{billableEmployeesDetails.clientName}}</td>
+                        <td>{{billableEmployeesDetails.employeeName}}</td>
+                        <td>{{billableEmployeesDetails.dateOfDeployment}}</td>
+                        <td>{{billableEmployeesDetails.contractEndDate}}</td>
+                        <td>{{billableEmployeesDetails.rateCard}}</td>
+                        <td>{{billableEmployeesDetails.stack}}</td>
+                        <td>{{billableEmployeesDetails.yearOfExperience}}</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
